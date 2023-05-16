@@ -1,0 +1,455 @@
+1. Da li se koncept virtuelne memorije može primjeniti pri segmentaciji slike procesa?
+• Da
+2. Kako se prevodi virtuelna adresa u fizičku adresu?
+• Pomoću tabele stranica
+3. Da li logička adresa ima vise bita od fizičke adrese memorije?
+• Da
+4. Šta je radni skup procesa?
+• Broj fizickih stranica potrebnih za rad procesa velikog broja straničnih prekida
+5. Koliko je uobičajena veličina stranice virtuelne memorije?
+• 0.5 – 8 K
+6. Kako se dijeli virtuelna memorija?
+• U stranice
+7. Šta je to trashing?
+• Stanje u kojem procesor samo radi stranične prekide
+8. Šta se nalazi u tabeli prekida?
+• Adrese obrađivača prekida (interupt handler)
+9. Koje su tipične operacije blokovskih uređaja?
+• Inicijalizacija
+• Ulaz i izlaz
+10. Koji tipovi I/O uređaja imaju bafere kao sastavni dio drajvera?
+• Znakovni
+11. I/O kontroler je:
+• Elektronski dio I/O uređaja
+12. Kada se puni tabela prekida?
+• U toku drajverske operacije inicijalizacije
+13. Šta su drajveri?
+• Programi za upravljanje I/O uređajima
+14. DMA skraćeno znači?
+• Direct Memory Access
+15. U čemu su osnovne razlike izmedju blokovskih i znakovnih I/O uređaja?
+• Načinu upravljanja
+• Jedinici pristupa
+• Načinu pristupa
+16. Ko najčešće aktivira znakovne uređaje?
+• Korisnici
+17. Ko najčešće aktivira blokovske uređaje?
+• Procesi
+18. Komanda kojom ćete obrisati čitav sadržaj vašeg HOME foldera ali ne i vaš home
+folder je
+• Rm ~/* -R
+19. Rezultat komande UMASK je 277 . Koja prava ćete imati nad direktorijumima koje
+vi kreirate?
+• Rx
+Operativni sistemi – II kolokvijum
+20. Ulogovani ste sa nalogom student i nalazite se u root direktorijumu . Potrebno je
+premjestiti fajl ~/linux.t u direktorijum ~/DIR. Pomoću kojih komandi to možete
+odraditi?
+• mv ~/linux.t /home/student/DIR
+• mv ~/linux.t ~/DIR
+21. Potrebno je kreirati novi fajl / spisak i u njega upisati tekući datum . Kojim
+komandama to možete odraditi?
+• date >> /spisak
+• date > /spisak
+22. Ulogovani ste kao korisnik student i nalazite se u vašem HOME direktorijumu.
+Potrebno je kopirati fajl /spisak u HOME direktorijum korisnika ETF . To možete
+odraditi pomoću:
+• cp /spisak /home/etf
+• cp /spisak ../etf
+23. Kako ćete vidjeti sadržaj root direktorijuma?
+• ls – al/
+24. Na koji način se mijenja ime fajlu prvi u drugi, ako je u tekućem direktorijumu?
+• mv prvi drugi
+25. Sa kojim komandama možete kreirati fajl?
+• Touch
+• Cat
+26. Na koji način se odjavljujete sa linux hosta?
+• Exit
+• Logout
+27. Ulogovani ste na sistem st1. Ako želite da predate svoj HOME direktorijum
+koristićete:
+• Cd ~
+• Cd /home/st1
+• Cd
+• Cd #
+28. Na koji način se brise sadrzaj direktorijuma *home/prvi ?
+• Rm /home/prvi/*
+29. Na koji način možete provjeriti kako ste logovani na host ?
+• Whoami
+30. Na koji način ćete regularnim fajlovima postaviti default-na prava u=rwx, g=w, o=r
+• Nije moguće uraditi
+31. Komanda kojom ćete prikazati sadržaj root direktorijuma uključujući skrivene
+fajlove je
+• ls/-a
+32. Po čemu se razlike preemptive i non-preemptive tipovi algoritma za raspoređivanje
+procesa?
+• Po načinu na koji se može CPU oduzeti procesima
+33. Koji tip algoritma za raspoređivanje implementiraju Windows OS?
+• Non-preemptive raspoređivanje
+Operativni sistemi – II kolokvijum
+34. Interaktivni proces imaju?
+• Veći prioritet
+• Manji kvantum
+35. Pozadinski proces imaju:
+• Veći kvantum
+• Manji prioritet
+36. Šta je to kvantum sa aspekta upravljanja procesima?
+• Isti interval vremena koji je određen svakom procesu
+37. Koji proces se prvi pokreće prilikom incijalizacije OS-a?
+• Beskonačni proces ili IDLE proces
+38. Kad se procesor priključuje na procese manjeg prioriteta?
+• Kad završi sve većeg prioriteta
+39. Skraćenje kvantuma
+• Ubrzava odziv
+40. Kad se procesor priključuje na procese većeg prioriteta?
+• Čim se takav proces pojavi
+41. Ako je proces veoma malo iskoristio zadnji kvantum njemu se prioritet?
+• Smanjuje
+42. Kojih procesa ima najviše prema statistikama?
+• Kratkotrajnih
+43. Koji algoritam se koristi pri izbjegavanju „mrtve“ petlje u sistemu koji ima po jedan
+primjerak jednog tipa resursa?
+• Graf alokacije resursa
+44. Može li se „pažljivom“ dodjelom resursa izbjeći mrtva petlja?
+• Da, ali to se u praksi ne koristi
+45. Koji način rješavanja „mrtve“ petlje najviše koristi u praksi?
+• Ignorisanje
+46. Koji od uslova nastanka petlje nije moguće onemogućiti?
+• Režim međusobne isključivosti
+47. Da li je virtuelna memorija veća od fizičke?
+• Da
+48. Šta je stranični prekid ili page fault?
+• Prenos nedostajuće stranice u fizičku memoriju iz virtuelne
+49. Da li virtuelna memorija ima internu fragmentaciju?
+• Da
+50. Da li stranice virtuelne i blokovi masovne memorije korespondiraju?
+• Da u nekom cjelobrojnom odnosu
+51. Kako memorijski mapirani I/O uređaji adresiraju svoje registre?
+• Svakom registru pridružuju broj I/O porta
+52. Da li se jedan isti drajver moze koristiti za više različitih I/O uređaja iste namjene?
+• Da
+53. Gdje se češće koriste specijalni fajlovi pri komunikaciji sa I/O uređajima?
+• Kod znakovnih uređaja
+Operativni sistemi – II kolokvijum
+54. Čemu služi bit prisutnosti?
+• Pokazuje da li element tabele stranica ima adresu fizičke stranice
+55. Koja je najvažnija funkcija DMA kontrolera?
+• Ubrzanje prenosa podataka na relaciji I/O sa memorijom
+56. Koja je funkcija prekida (interupts)?
+• Da prekine izvršenje nekog procesa
+57. I/O uređaji se dijele na: (1 ili više odgovora)
+• Znakovne
+• Blokovske
+58. Čemu služi mehanizam prekida?
+• Mehanizam prekida poziva obrađivače prekida (interrput handler)
+59. Nalazite se u root direktorijumu. Potrebno je kopirati fajl ~/linux.t u direktorijum
+~/DIR. Pomoću kojih komandi to možete odraditi? (1 ili više odgovora)
+• cp ~linux.t ~/DIR
+• cp ~linux.t ~/DIR -r
+60. Komanda mv /*A ~/“ radi sljedeće: (1 odgovor)
+• Sve fajlove iz direktorijuma i iz root direktorijuma koji počinju slovom A premješta u
+naš HOME direktorijum
+61. Rezlutat komande UMASK je 277. Koja prava ćete imati na fajlovima koje vi
+kreirate? (1 odgovor)
+• r
+62. Čekirajte komande koje imaju ispravan zapis. (Linux neće prijaviti grešku pri
+njihovom izvršavanju) (1 ili više odgovora -4)
+• touch ~
+• mkdir ~/A/B -p
+• mv ~/A ./ -R
+• ls
+• date
+63. Kojom komandom ćete prikazati korisničke dozvole nad vašim HOME
+direktorijumom ?
+• ls -id ~
+64. Koji od ponuđenih su algoritmi za raspoređivanje?
+• First Come First Serve
+• Priority scheduling
+65. Na koji način se može oduzeti CPU procesima kod Windos OS-a?
+• Jedino ako je završio aktivnost i čeka I/O
+66. Da li procesi imaju iste pioritete?
+• Ne
+67. Da li su omogućeni prekidi nad operacijama koje upravljaju procesorom?
+• Ne
+68. Koji tip algoritma za raspoređivanje implementiraju UNIX-like OS?
+• Preemptive raspoređivanje
+69. Koji od ponuđenih kriterijuma se koriste za izbor algoritma za raspoređivanje?
+• Throughput
+• CPU utilization
+• Response time
+Operativni sistemi – II kolokvijum
+70. Pozadinski procesi imaju:
+• veći kvantum
+• manji prioritet
+71. Interaktivni procesi imaju:
+• veći prioritet
+• manji kvantum
+72. Da li se dužina kvantuma mijenja?
+• Da
+73. Na šta se primjenjuje kuržno raspoređivanje?
+• Na sve procese istog prioriteta
+74. Da li se prioriteti procesa mijenjaju u toku rada procesa?
+• Da
+75. Čekirajte tačne tvrdnje:
+• Dozvoljeno je praviti meke linkove na direktorijume
+• Dozvoljeno je praviti tvrde linkove na meke linkove
+• Nakon brisanja fajla na koji pokazuje meki link ~/mlink prilikom poziva cat ~/mlink
+javiti grešku
+• Prvi karakter u detaljnim informacijama kod mekih linkova je uvijek „I“.
+76. Ulogovani ste na sistem sa korisničkim imenom st45. Koja prava imate nad
+direktorijumom čija je putanja /home/test?
+• R
+• x
+77. Pomoću koje naredbe se arhivira-objedinjuje home folder u fajl arh?
+• Zip ~/* arh
+78. Kako ćete u vašem home direktorijumu kreirati meki link na root direktorijum pod
+nazivom sroot?
+• In -s / ~/sroot
+79. Kako se može uništiti proces čiji je PID 1459?
+• Kill -9 1459
+80. Ispod je dat rezultat komande ls -I ~/spisak. Koji je broj hard linkova na fajl
+spisak?
+• -rwxr-xr-x 2 st1 users 3 2012-11-4 12:50 spisak
+81. Na koji način se zipuju svi fajlovi u vašem HOME direktorijumu u fajl arhiva?
+• zip ~/arhiva ~/*
+82. Kako se provjerava koji su korisnici trenutno logovani na sistem?
+• W
+• Who
+83. Kako ćete u vašem home direktorijumu kreirati tvrdi link na root direktorijum pod
+nazivom hroot?
+• To nije dozvoljeno
+1. Komanda kojom ćete obrisati čitav sadržaj vašeg HOME foldera ali ne i vašhome
+folder je
+• Rm ~/* -R
+2. Rezultat komande UMASK je 277 . Koja prava ćete imati nad direktorijumima koje
+vi kreirate?
+• Rx
+3. Ulogovani ste sa nalogom student i nalazite se u root direktorijumu . Potrebnoje
+premjestiti fajl ~/linux.t u direktorijum ~/DIR. Pomoću kojih komandi to možete
+odraditi?
+• mv ~/linux.t /home/student/DIR
+• mv ~/linux.t ~/DIR
+4. Potrebno je kreirati novi fajl / spisak i u njega upisati tekući datum .Kojim
+komandama to možete odraditi?
+• date >> /spisak
+• date > /spisak
+5. Ulogovani ste kao korisnik student i nalazite se u vašem HOME direktorijumu.
+Potrebno je kopirati fajl /spisak u HOME direktorijum korisnika ETF . Tomožete
+odraditi pomoću:
+• cp /spisak /home/etf
+• cp /spisak ../etf
+6. Kako ćete vidjeti sadržaj root direktorijuma?
+• ls – al/
+7. Na koji način se mijenja ime fajlu prvi u drugi, ako je u tekućemdirektorijumu?
+• mv prvi drugi
+8. Sa kojim komandama možete kreirati fajl?
+• Touch
+• Cat
+9. Na koji način se odjavljujete sa linux hosta?
+• Exit
+• Logout
+10. Ulogovani ste na sistem st1. Ako želite da predate svoj HOME direktorijum
+koristićete:
+• Cd ~
+• Cd /home/st1
+• Cd
+• Cd #
+11. Na koji način se brise sadrzaj direktorijuma *home/prvi ?
+• Rm /home/prvi/*
+12. Na koji način možete provjeriti kako ste logovani na host ?
+• Whoami
+13. Na koji način ćete regularnim fajlovima postaviti default-na prava u=rwx, g=w,o=r
+• Nije moguće uraditi
+14. Komanda kojom ćete prikazati sadržaj root direktorijuma uključujućiskrivene
+Operativni sistemi – II kolokvijum
+2
+fajlove je
+• ls/-a
+15. Nalazite se u root direktorijumu. Potrebno je kopirati fajl ~/linux.t udirektorijum
+~/DIR. Pomoću kojih komandi to možete odraditi? (1 ili više odgovora)
+• cp ~linux.t ~/DIR
+• cp ~linux.t ~/DIR -r
+16. Komanda mv /*A ~/“ radi sljedeće: (1 odgovor)
+• Sve fajlove iz direktorijuma i iz root direktorijuma koji počinju slovom A
+premještau
+naš HOME direktorijum
+17. Rezlutat komande UMASK je 277. Koja prava ćete imati na fajlovima koje vi
+kreirate? (1 odgovor)
+• r
+18. Čekirajte komande koje imaju ispravan zapis. (Linux neće prijaviti greškupri
+njihovom izvršavanju) (1 ili više odgovora -4)
+• touch ~
+• mkdir ~/A/B -p
+• mv ~/A ./ -R
+• ls
+• date
+19. Kojom komandom ćete prikazati korisničke dozvole nad vašim HOME
+direktorijumom ?
+•ls -id ~
+20. Čekirajte tačne tvrdnje:
+• Dozvoljeno je praviti meke linkove na direktorijume
+• Dozvoljeno je praviti tvrde linkove na meke linkove
+• Nakon brisanja fajla na koji pokazuje meki link ~/mlink prilikom poziva cat
+~/mlink
+javiti grešku
+• Prvi karakter u detaljnim informacijama kod mekih linkova je uvijek „I“.
+21. Ulogovani ste na sistem sa korisničkim imenom st45. Koja prava imatenad
+direktorijumom čija je putanja /home/test?
+• R
+• x
+22. Pomoću koje naredbe se arhivira-objedinjuje home folder u fajl arh?
+• Zip ~/* arh
+23. Kako ćete u vašem home direktorijumu kreirati meki link na root direktorijumpod
+nazivom sroot?
+• In -s / ~/sroot
+24. Kako se može uništiti proces čiji je PID 1459?
+• Kill -9 1459
+25. Ispod je dat rezultat komande ls -I ~/spisak. Koji je broj hard linkova na fajl
+spisak?
+• -rwxr-xr-x 2 st1 users 3 2012-11-4 12:50 spisak
+Operativni sistemi – II kolokvijum
+3
+26. Na koji način se zipuju svi fajlovi u vašem HOME direktorijumu u fajl arhiva?
+• zip ~/arhiva ~/*
+27. Kako se provjerava koji su korisnici trenutno logovani na sistem?
+• W
+• Who
+28. Kako ćete u vašem home direktorijumu kreirati tvrdi link na root direktorijum pod
+nazivom hroot?
+• To nije dozvoljeno
+29. Na koji nacin se mozete logovati na host sa ip adresom 10.10.10.1?
+• telent 10.10.10.1
+30. Spojite komande sa funkcijama koje obavljaju?
+• date – prikaz I podesavanje datuma I vremena(stampa na ekranu tekuci datum I
+vrijeme)
+• pwd – informacije o tekucem direktorijumu(stampa na ekranu putanju do
+tekuceg direktorijuma)
+• whoami – stampa na ekran nase korisnicko ime
+• exit – odjavljivanje sa sistema
+• w – stampa na ekranu spisak logovanih korisnika
+31. Ulogovani ste sa nalogom student I nalazite se u vasem home direktorijumu potrebno
+je preimenovati direktorijum ~/DIR u DIR1. Pomocu kojih komandi to mozete
+odraditi?
+• mv ~/DIR ~/DIR1
+• mv DIR /student/DIR1
+• mv DIR ./DIR1
+• mv ~/DIR ./DIR1
+32. Kako cete kreirati direktorijum DIR u tekucem direktorijumu?
+• mkdir DIR
+• mkdir ./DIR
+33. Ulogovani ste kao koristik st1 i poznato je da nijeste clan grupe users. Koja prava nad
+direktorijumom DIR, cije su detaljne informacije date ispod?
+Drwx—xr-x 13 st4 users 4096 2012-09-05 13:53 DIR
+• rx
+34. Potrebno je postaviti defautna prava za novokreirane direktorijume tako da vlasnik
+ima sva sprava, grupa pravo read, a ostali nemaju prava. Kojom komandom cete to
+odraditi?
+• umask u=rwx, g=r, o=
+• umask 037
+35. Ispod je dat rezultat komade ls -l ~/spisak
+-rwxr-xr-x 2 st1 users 3 2012-11-4 12:50 spisak
+Koliko je broj hard linkova na fajl spisak?
+• 2
+Operativni sistemi – II kolokvijum
+4
+36. Na koji naxcin cete regularnim fajlovima postaviti defaultna prava u=rwx,g=w,o=r
+• To nije moguce odraditi
+37. Ispod je dat rezultat komade ls -l ~/
+-rwxr-xr-x 2 st1 users 3 2012-11-4 12:50 spisak
+Koliko je broj hard linkova na direktprijum ~?
+• Ne postoji takav podatak u gore navedenim informacijama
+38. Potrebno je svim korisnicimapostaviti pravo read nad direktorijumom /etc. Kojom
+komandom?
+• chmod u=r,g=r,o=r /etc
+• chmod a=r /etc
+39. Kako cete vlasniku fajla /spisak oduzeti pravo read?
+• chmod u-r /spisak
+40. Za svaku editor komandu izabrati odg. opis iz menija?
+• esc – prelazak u komandni mod
+• :wq – cuvanje fajla
+• i – prelazak u tekstualni mod
+ln -s / ~/sroot
+(kreiramo meki link)
+ls -l ~/sroot
+(provjeravam velicinu fajla)
+date > ~/datum
+(kreiramo fajl datum koji sadrzi danasnji datum)
+ln ~/datum ~/hdatum
+(kreiramo meki link nad fajlom datum)
+ln -s ~/datum ~/sdatum
+(kreiramo tvrdi link nad fajlom datum)
+cat ~/datum
+cat ~/hdatum
+cat ~/sdatum
+(prikazujemo sadrzaj fajla)
+ls -l ~/datum
+ls -l ~/hdatum
+ls -l ~/sdatum
+(detaljne informacije)
+rm ~/datum (meki link sdatum vise nije funkcionalan)
+ln ~/sdatum ~/tdatum (ne moze jer je u proslom zadatku izbrisan fajl datum, a samim tim i fajl sdatum jer je to
+meki link)
+ls -l ~/tdatum
+find ~ -name ".B" -user stud1
+(pronalazimo sve skrivene fajlove koje sadrze slovo B i koje smo kreirali)
+grep "abba" ~/.*
+(pronalazimo sve skrivene fajlove koje sadrze u sadrzaju string "abba")
+grep "st6" /etc/passwd
+(provjeravamo da li u sistemu postoji korisnik st6)
+find / -name "passwd"
+(provjeravamo da li postoji fajl ciji je naziv passwd)
+mkdir ~/Linux1/FolderA/FolderB -p
+mkdir ~/Linux1/FolderA/FoldeerC -p
+mkdir ~/Linux1/FolderD -p
+(kreiranje direktorijuma)
+cat > ~/Linux1/ime.i
+Filip
+(Ctrl + D)
+cat > ~/Linux1/FolderA/FolderC/datum.d
+5.5.2019.
+(Ctrl + D)
+(kreiranje fajlova)
+mv ~/Linux1/ime.i ~/Linux1/.ime.i
+mv ~/Linux1/FolderA/FolderC ~/Linux1/LinuxA/LinuxB
+(premjestanje fajlova i direktorijuma)
+whoami
+(nase korisnicko ime)
+cp /*a* ~/Linux1/FolderD
+(kopiranje fajlova)
+mv ~/Linux1/FolderA/FolderB ~/Linux1/FolderA/FolderE
+mkdir ~/Linux1/FolderA/FolderE/FolderF -p
+mv ~/Linux1/.ime.i ~/Linux1/ime.p
+cd ~/Linux1/FolderA
+(kretanje kroz direktorijume)
+pwd
+(/home/sud8/Linux1/FolderA)
+(putanja do tekuceg direktorijuma)
+touch ~/Linux1/novi.f
+(kreiranje praznih fajlova)
+touch ~
+(mijenja se datum modifikacije direktorijuma)
+cd /etc
+cd ~/Linux1
+(prelazak u direktorijum Linux1)
+mkdir Proba
+(relativno adresiranje)
+rm ~Linux1/FolderD/*
+(brisanje fajlova) (brisanje direktorujuma dodajemo -R)
+ls ~/etf -al
+(informacije o sadrzaju direktorijuma)
+mv ~/Linux1/novi.f ~/Linux1/FolderA/FolderC/novi.c
+w (who)
+(skisak logovanih korisnika)
+ls /
+ls ~/Linux1/.*z*
+(prikazivanje skrivenih fajlova)
+rm ~/Linux1/*B* -R
+(brisanje direktorijuma i fajlova)
+cd ~/Linux1
+mv ime.p Folder D
+(nalazimo se u dir. Linux1 i pomocu relativnog adresiranja premjestamo fajl)
+rm ~/Linux1/*B*
+(brisanje fajlova)
+rm ~/Linux1/*B*/ -R
+(brisanje direktorijuma)
+mv ~/Linux1/FolderA/FolderB(E) ~/Linux1/FolderD/FolderE
